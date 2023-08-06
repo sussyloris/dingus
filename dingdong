@@ -1,0 +1,11 @@
+-- // Variables
+
+local players = game:GetService('Players')
+local localPlayer = players.LocalPlayer
+
+-- Main
+
+for i,v in pairs(players:GetPlayers()) do
+   if v ~= localPlayer and v.Character:FindFirstChildOfClass('Highlight') then
+       v.Character.PlayerOutline.Enabled = true
+   end
